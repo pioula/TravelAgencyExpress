@@ -1,0 +1,145 @@
+body {
+    background-color: #F7E1D0;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* header */
+body > header {
+    background-color: #D6BEB4;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: space-between;
+    display: inline-flex;
+}
+
+/* header img */
+body > header > figure {
+    height: 78px;
+    width: 35%;
+}
+
+body > header > figure > img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* nav bar */
+nav {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.header_nav {
+    width: 65%
+}
+
+nav > ul {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav > ul > li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav > ul > li > p {
+    margin: 0;
+}
+
+/* footer */
+body > footer {
+    background-color: #F7D0E3;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: space-between;
+    display: inline-flex;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: sans-serif;
+}
+
+.footer_nav {
+    width: 100%
+}
+
+.footer_nav_text {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+aside h1 {
+    font-size: xx-large;
+}
+
+article h1 {
+    font-size: xx-large;
+}
+
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: none;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    text-decoration: underline;
+  }
+
+@media only screen and (max-width: 600px) {
+    .header_nav {
+        display: none;
+    }
+
+    .dropdown {
+        display: inline-block;
+    }
+}
