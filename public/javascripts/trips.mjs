@@ -5,10 +5,10 @@ const trips = [
     price: 1337,
     img: 'images/havana.jpg',
     trip_description: "Whether you're looking to \
-      <u>relax</u> on the beach, \
-      <u>play</u> water sports, go on an \
-      <u>adventurous</u> hike, \
-      or get the most <u>fabulous massage</u> you've ever \
+      relax on the beach, \
+      play water sports, go on an \
+      adventurous hike, \
+      or get the most fabulous massage you've ever \
       experienced, luxury Caribbean vacations offer \
       something for everyone. Each Caribbean island \
       is unique, from its people and culture to its \
@@ -30,10 +30,10 @@ const trips = [
     price: 2137,
     img: 'images/cuba.jpg',
     trip_description: "Whether you're looking to \
-      <u>relax</u> on the beach, \
-      <u>play</u> water sports, go on an \
-      <u>adventurous</u> hike, \
-      or get the most <u>fabulous massage</u> you've ever \
+      relax on the beach, \
+      play water sports, go on an \
+      adventurous hike, \
+      or get the most fabulous massage you've ever \
       experienced, luxury Caribbean vacations offer \
       something for everyone. Each Caribbean island \
       is unique, from its people and culture to its \
@@ -55,10 +55,10 @@ const trips = [
     price: 7008,
     img: 'images/costa_rica.jpg',
     trip_description: "Whether you're looking to \
-      <u>relax</u> on the beach, \
-      <u>play</u> water sports, go on an \
-      <u>adventurous</u> hike, \
-      or get the most <u>fabulous massage</u> you've ever \
+      relax on the beach, \
+      play water sports, go on an \
+      adventurous hike, \
+      or get the most fabulous massage you've ever \
       experienced, luxury Caribbean vacations offer \
       something for everyone. Each Caribbean island \
       is unique, from its people and culture to its \

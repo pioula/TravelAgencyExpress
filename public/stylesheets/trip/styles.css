@@ -1,0 +1,45 @@
+.cuba {
+  float: left;
+  width: 300px;
+  margin: 10px;
+}
+article ul > li {
+  margin: 0;
+  list-style-type: none;
+  text-indent: -5px;
+}
+article ul > li:before {
+  content: "-";
+  text-indent: -5px;
+}
+
+.button {
+  transition-duration: 0.4s;
+  background-color: #6EBBF5;
+  border: #2973ac;
+  border-style: solid;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+}
+
+.buttons {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.button:hover {
+background-color: #C9B4D6;
+color: white;
+}
+
+main {
+  max-width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}

@@ -1,0 +1,20 @@
+//- Layouts
+extends layout/default
+
+//- Includes
+include mixins/image
+
+block append head
+  link(rel='stylesheet', href='../stylesheets/trip/styles.css')
+
+block content
+  main
+    article
+      header
+        +image()(src=`http://localhost:3000/${trip.img}`, alt=trip.title, class='cuba')
+        h1 #{trip.title}
+      section
+        p #{trip.trip_description}
+    section.buttons
+      a(class='left-button button' href="../home") Back
+      a(class='right-button button' href=`../book/${trip_id}`) Book

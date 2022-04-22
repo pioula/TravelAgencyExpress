@@ -1,12 +1,12 @@
 include image
 
-mixin tripOffer(trip)
+mixin tripOffer(trip, trip_id)
   section.offer
-    +image()(src=trip.img, alt='logo', class="offer_img")
+    +image()(src=trip.img, alt=trip.title, class="offer_img")
     article.offer_article
       header
         h1 #{trip.title}
       p.offer_description #{trip.offer_description}
       footer.offer_footer
         p Price: #{trip.price}
-        a(href='../caribbeanTripDescription/index.html') Book &gt;&gt;
+        a(href='trip/' + trip_id) Book &gt;&gt;

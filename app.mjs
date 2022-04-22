@@ -1,5 +1,7 @@
 import express from 'express';
+import bookRouter from './routes/book.route.mjs';
 import homeRouter from './routes/home.route.mjs';
+import tripDescriptionRouter from './routes/tripDesc.router.mjs';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -10,6 +12,8 @@ app.set('view engine', 'pug');
 app.use(express.static('public'));
 
 app.use('/home', homeRouter);
+app.use('/trip', tripDescriptionRouter);
+app.use('/book', bookRouter)
 
 app.use((req, res, next) => {
   next(404);

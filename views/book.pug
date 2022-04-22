@@ -1,0 +1,17 @@
+extends layout/default
+
+//- includes
+include mixins/nameInput
+
+block append head
+  link(rel='stylesheet', href='http://localhost:3000/stylesheets/book/styles.css')
+
+block content 
+  main
+    section
+      form(autocomplete='on', name='booking_form')
+        +nameInput({ label: 'First name:', name: 'fname' })
+        +nameInput({ label: 'Second name:', name: 'lname' })
+        button(type='submit') Submit
+  script(type='text/javascript', src='http://localhost:3000/javascripts/book/form_checker.mjs')
+  script(type='text/javascript', src='http://localhost:3000/javascripts/book/form_focus.mjs')

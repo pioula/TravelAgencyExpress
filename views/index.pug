@@ -11,19 +11,22 @@ block append head
   link(rel='stylesheet', href='stylesheets/home/styles.css')
 
 block content
-    main
-      each trip in trips
-        +tripOffer(trip)
-    aside
-      section.promotions
-        header
-          h1 Promotions
-          each promotion in promotions
-            +promotion(promotion)
-      section
-        header
-          h1 Advices
-        table
-          tbody
-            each advice in advices
-              +advice(advice)
+  main
+    p #{pagination}
+    - for (let trip_id = 0; trip_id < trips.length; trip_id++)
+      +tripOffer(trips[trip_id], trip_id)
+    button(type='button', id='next_page_button') Next Page
+  aside
+    section.promotions
+      header
+        h1 Promotions
+        each promotion in promotions
+          +promotion(promotion)
+    section
+      header
+        h1 Advices
+      table
+        tbody
+          each advice in advices
+            +advice(advice)
+  script(type='text/javascript', src='http://localhost:3000/javascripts/home/pagination.mjs')

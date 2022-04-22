@@ -10,22 +10,22 @@ html(lang="en")
       meta(http-equiv='X-UA-Compatible', content='IE=edge')
       meta(name='viewport' content='width=device-width, initial-scale=1.0')
       title Travel Agency
-      link(rel='stylesheet', href='stylesheets/globals.css')
+      link(rel='stylesheet', href='http://localhost:3000/stylesheets/globals.css')
   body
     header 
       block bodyHeader
-        +image()(src='images/logo.png', alt='logo')
+        +image()(src='http://localhost:3000/images/logo.png', alt='logo')
         nav.dropdown
           .dropbtn Menu
           .dropdown-content
-            a(href='#') Home
-            a(href='#') Trip           
-            a(href='#') Book
+            a(href='http://localhost:3000/home') Home
+            a(href='http://localhost:3000/home') Trip           
+            a(href='http://localhost:3000/home') Book
         nav.header_nav
           ul
-            li: a(href="#") Home
-            li: a(href="#") Trip 
-            li: a(href="#") Book    
+            li: a(href="http://localhost:3000/home") Home
+            li: a(href="http://localhost:3000/home") Trip 
+            li: a(href="http://localhost:3000/home") Book    
     .page
         block content
     footer
@@ -33,6 +33,6 @@ html(lang="en")
         nav.footer_nav
           ul
             li: p.footer_nav_text Travel agency 2022
-            li: a(href='#') About
-            li: a(href='#') Privacy Politics 
-            li: a(href='#') Contact
+            li: a(href='http://localhost:3000/home') About
+            li: a(href='http://localhost:3000/home') Privacy Politics 
+            li: a(href='http://localhost:3000/home') Contact
