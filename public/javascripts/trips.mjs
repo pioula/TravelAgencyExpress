@@ -25,10 +25,10 @@ const trips = [
       just waiting for you."
   },
   {
-    title: 'Luxury Cribbean vacations',
-    offer_description: 'A trip to Caribbean',
-    price: 1337,
-    img: 'images/havana.jpg',
+    title: 'Cuba is C00l',
+    offer_description: 'A trip to Cuba',
+    price: 2137,
+    img: 'images/cuba.jpg',
     trip_description: "Whether you're looking to \
       <u>relax</u> on the beach, \
       <u>play</u> water sports, go on an \
@@ -50,10 +50,10 @@ const trips = [
       just waiting for you."
   },
   {
-    title: 'Luxury Cribbean vacations',
-    offer_description: 'A trip to Caribbean',
-    price: 1337,
-    img: 'images/havana.jpg',
+    title: 'Costa Rica is the best',
+    offer_description: 'A trip to Consta Rica',
+    price: 7008,
+    img: 'images/costa_rica.jpg',
     trip_description: "Whether you're looking to \
       <u>relax</u> on the beach, \
       <u>play</u> water sports, go on an \

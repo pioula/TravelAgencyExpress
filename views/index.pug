@@ -5,6 +5,7 @@ extends layout/default
 include mixins/image
 include mixins/tripOffer
 include mixins/promotion
+include mixins/advice
 
 block append head
   link(rel='stylesheet', href='stylesheets/home/styles.css')
@@ -24,29 +25,5 @@ block content
           h1 Advices
         table
           tbody
-            
-            <section>
-                <header>
-                    <h1>Advices</h1>
-                </header>
-    
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>
-                                What to take on a trip?
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                The best time to visit
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                What shoes are the most comfortable?
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
+            each advice in advices
+              +advice(advice)
