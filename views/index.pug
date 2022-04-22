@@ -1,3 +1,52 @@
+//- Layouts
 extends layout/default
 
+//- Includes
+include mixins/image
+include mixins/tripOffer
+include mixins/promotion
+
+block append head
+  link(rel='stylesheet', href='stylesheets/home/styles.css')
+
 block content
+    main
+      each trip in trips
+        +tripOffer(trip)
+    aside
+      section.promotions
+        header
+          h1 Promotions
+          each promotion in promotions
+            +promotion(promotion)
+      section
+        header
+          h1 Advices
+        table
+          tbody
+            
+            <section>
+                <header>
+                    <h1>Advices</h1>
+                </header>
+    
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                What to take on a trip?
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                The best time to visit
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                What shoes are the most comfortable?
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>

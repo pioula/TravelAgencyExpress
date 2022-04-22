@@ -1,4 +1,5 @@
 import express from 'express';
+import homeRouter from './routes/home.route.mjs';
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -8,9 +9,7 @@ app.set('view engine', 'pug');
 
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-  res.status(200).render('index.pug');
-})
+app.use('/home', homeRouter);
 
 app.use((req, res, next) => {
   next(404);
