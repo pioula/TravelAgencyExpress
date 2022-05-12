@@ -23,8 +23,8 @@ let tripData = [{
     quiet island, the Caribbean islands deliver every \
     kind of adventure. A custom Caribbean vacation is \
     just waiting for you.",
-    beg_date: '05.05.2022',
-    end_date: '07.05.2022',
+    beg_date: '05.10.2022GMT',
+    end_date: '06.28.2023GMT',
     tickets_left: 13,
 },
 {
@@ -51,8 +51,8 @@ let tripData = [{
     quiet island, the Caribbean islands deliver every \
     kind of adventure. A custom Caribbean vacation is \
     just waiting for you.",
-    beg_date: '05.05.2022',
-    end_date: '07.05.2022',
+    beg_date: '05.22.2023GMT',
+    end_date: '06.27.2023GMT',
     tickets_left: 13,
 },
 {
@@ -79,8 +79,8 @@ let tripData = [{
     quiet island, the Caribbean islands deliver every \
     kind of adventure. A custom Caribbean vacation is \
     just waiting for you.",
-  beg_date: '05.05.2022',
-  end_date: '07.05.2022',
+  beg_date: '05.20.2023GMT',
+  end_date: '06.26.2023GMT',
   tickets_left: 13,
 }];
 
@@ -96,7 +96,7 @@ let reservationData = [
 
 let db = await getDatabase();
 
-//tripData.forEach((trip) => db.Trip.create(trip));
-reservationData.forEach((reservation) => db.Reservation.create(reservation));
+tripData.forEach((trip) => db.Trip.create(trip));
+//reservationData.forEach((reservation) => db.Reservation.create(reservation));
 
 console.log("Done!");

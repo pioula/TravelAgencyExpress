@@ -11,7 +11,6 @@ const tripModel = (sequelize, Sequelize, DataTypes) => {
             title: {
               type: DataTypes.STRING,
               allowNull: false,
-              unique: true,
             },
             offer_description: {
               type: DataTypes.STRING(2000),
