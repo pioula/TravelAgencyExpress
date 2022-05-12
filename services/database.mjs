@@ -3,7 +3,7 @@ import reservationModel from './reservation.mjs';
 import tripModel from './trip.mjs';
 
 // Połączenie z bazą danych
-const sequelize = new Sequelize('postgres', 'postgres', 'admin', {
+const sequelize = new Sequelize('TravelAgency', 'postgres', 'admin', {
     host: 'localhost',
     dialect: 'postgres'
   });
@@ -16,20 +16,21 @@ const getDatabase = () => {
         db.sequelize = sequelize;
         
         db.Trip = tripModel(sequelize, Sequelize, DataTypes);
-        // db.Reservation = reservationModel(sequelize, Sequelize, DataTypes);
+        db.Reservation = reservationModel(sequelize, Sequelize, DataTypes);
         
-        // db.Trip.hasMany(db.Reservation, {
-        //   foreignKey: {
-        //     allowNull: false,
-        //     name: 'tripId'
-        //   }
-        // });
-        // db.Reservation.belongsTo(db.Trip);
-        return db.sequelize.sync({focre: true}).then(() => db);
+        db.Trip.hasMany(db.Reservation, {
+          foreignKey: {
+            allowNull: false,
+            name: 'tripId'
+          }
+        });
+        db.Reservation.belongsTo(db.Trip);
+        return db.sequelize.sync().then(() => db);
       })
       .catch((err) => console.log(err));
 };
 
 await getDatabase();
+
 
 export default getDatabase;

@@ -2,7 +2,7 @@ const tripModel = (sequelize, Sequelize, DataTypes) => {
         const Trip = sequelize.define('Trip', {
             // Model attributes are defined here
             id: {
-                type: DataType.INTEGER,
+                type: DataTypes.INTEGER,
                 primaryKey: true,
             },
             title: {
@@ -11,7 +11,7 @@ const tripModel = (sequelize, Sequelize, DataTypes) => {
               unique: true,
             },
             offer_description: {
-              type: DataTypes.STRING,
+              type: DataTypes.STRING(2000),
               allowNull: false
             },
             price: {
@@ -23,7 +23,7 @@ const tripModel = (sequelize, Sequelize, DataTypes) => {
                 allowNull: false
             },
             trip_description: {
-                type: DataTypes.STRING,
+                type: DataTypes.STRING(2000),
                 allowNull: false
             },
             beg_date: {
@@ -46,7 +46,7 @@ const tripModel = (sequelize, Sequelize, DataTypes) => {
                 allowNull: false
             }
           }, {
-            tableName: 'Trips'
+            tableName: 'trips'
           });
 
           return Trip;

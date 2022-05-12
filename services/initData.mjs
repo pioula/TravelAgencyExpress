@@ -87,6 +87,7 @@ let data = [{
   tickets_left: 13,
 }]
 
-getDatabase()
-  .then((db) => db.Trip.create(data[0]))
-  .then((trip) => console.log(trip.toJSON()));  
+await getDatabase()
+  .then((db) => data.forEach((trip) => db.Trip.create(trip)));
+
+console.log("Done!");

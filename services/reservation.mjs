@@ -20,7 +20,7 @@ const reservationModel = (sequelize, Sequelize, DataTypes) => {
         allowNull: false
       },
     }, {
-      tableName: 'Reservations'
+      tableName: 'reservations'
     });
 
     return Reservation;
