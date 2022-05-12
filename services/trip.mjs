@@ -4,8 +4,9 @@ const tripModel = (sequelize, Sequelize, DataTypes) => {
         const Trip = sequelize.define('Trip', {
             // Model attributes are defined here
             id: {
-                type: DataTypes.INTEGER,
-                primaryKey: true,
+                type: Sequelize.INTEGER,
+                autoIncrement: true,
+                primaryKey: true
             },
             title: {
               type: DataTypes.STRING,

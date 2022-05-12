@@ -1,6 +1,5 @@
 import getDatabase from "./database.mjs";
-let data = [{
-  id: 0,
+let tripData = [{
   title: 'Luxury Cribbean vacations',
   offer_description: 'A trip to Caribbean',
   price: 1337,
@@ -29,7 +28,6 @@ let data = [{
     tickets_left: 13,
 },
 {
-  id: 1,
   title: 'Cuba is C00l',
   offer_description: 'A trip to Cuba',
   price: 2137,
@@ -58,7 +56,6 @@ let data = [{
     tickets_left: 13,
 },
 {
-  id: 2,
   title: 'Costa Rica is the best',
   offer_description: 'A trip to Consta Rica',
   price: 7008,
@@ -85,9 +82,21 @@ let data = [{
   beg_date: '05.05.2022',
   end_date: '07.05.2022',
   tickets_left: 13,
-}]
+}];
 
-await getDatabase()
-  .then((db) => data.forEach((trip) => db.Trip.create(trip)));
+let reservationData = [
+  {
+    tripId: 1,
+    name: 'Piotr',
+    lastName: 'Ulanowski',
+    email: 'a@b.cd',
+    tickets: '1'
+  }
+]
+
+let db = await getDatabase();
+
+//tripData.forEach((trip) => db.Trip.create(trip));
+reservationData.forEach((reservation) => db.Reservation.create(reservation));
 
 console.log("Done!");
