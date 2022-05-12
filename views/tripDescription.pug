@@ -12,7 +12,7 @@ block content
     article
       header
         +image()(src=`http://localhost:3000/${trip.img}`, alt=trip.title, class='cuba')
-        h1 #{trip.title}
+        h1 #{trip.title} #{trip.beg_date.toLocaleDateString("en-US")} - #{trip.end_date.toLocaleDateString("en-US")}
       section
         p #{trip.trip_description}
     section.buttons

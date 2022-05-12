@@ -30,4 +30,6 @@ const getDatabase = () => {
       .catch((err) => console.log(err));
 };
 
-export default getDatabase;
+const db = await getDatabase();
+
+export default db;
