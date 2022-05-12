@@ -12,8 +12,8 @@ block append head
 
 block content
   main
-    - for (let trip_id = 0; trip_id < trips.length; trip_id++)
-      +tripOffer(trips[trip_id], trip_id)
+    each trip in trips
+      +tripOffer(trip, trip.id)
   aside
     section.promotions
       header

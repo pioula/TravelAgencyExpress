@@ -30,19 +30,4 @@ const getDatabase = () => {
       .catch((err) => console.log(err));
 };
 
-//- img title offer_description price id
-let trips = await getDatabase()
-  .then((db) => db.Trip.findAll({
-    attributes: ['id', 'title', 'offer_description', 'img', 'price', 'beg_date', 'end_date'],
-    where: {
-      beg_date: {
-        [Op.gt]: new Date(),
-      }
-    },
-    order: sequelize.col('beg_date'),
-  }))
-  .then((trips) => trips.map((val, _ind) => val.dataValues));
-
-console.log(trips);
-
 export default getDatabase;
