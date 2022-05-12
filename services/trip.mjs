@@ -1,3 +1,5 @@
+import { DATE } from "sequelize";
+
 const tripModel = (sequelize, Sequelize, DataTypes) => {
         const Trip = sequelize.define('Trip', {
             // Model attributes are defined here
@@ -33,13 +35,13 @@ const tripModel = (sequelize, Sequelize, DataTypes) => {
             end_date: {
                 type: DataTypes.DATE,
                 allowNull: false,
-                // validate: {
-                //     isLaterThanBegDate(value) {
-                //         if (value >= this.beg_date) {
-                //           throw new Error('end_date must be later than beg_date');
-                //         }
-                //       }
-                // }
+                validate: {
+                    isLaterThanBegDate(value) {
+                        if (value <= this.beg_date) {
+                          throw new Error(`end_date must be later than beg_date`);
+                        }
+                      }
+                }
             },
             tickets_left: {
                 type: DataTypes.INTEGER,
