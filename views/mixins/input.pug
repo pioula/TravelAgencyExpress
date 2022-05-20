@@ -1,0 +1,5 @@
+mixin input(inputData)
+  section
+    label #{inputData.label}
+    input(type=`${inputData.type}`, name=`${inputData.name}`)
+    p(id='input_error') This field is invalid
