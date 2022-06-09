@@ -4,15 +4,15 @@ import tripModel from './trip.mjs';
 import userModel from './user.mjs';
 
 // // Połączenie z bazą danych
-export let sequelize = new Sequelize('TravelAgency', 'postgres', 'admin', {
-    host: 'localhost',
-    dialect: 'postgres'
-  });
+// export let sequelize = new Sequelize('TravelAgency', 'postgres', 'admin', {
+//     host: 'localhost',
+//     dialect: 'postgres'
+//   });
 
-// export let sequelize = new Sequelize({
-//   dialect: 'sqlite',
-//   storage: './mydatabase.sqlite',
-// });
+export let sequelize = new Sequelize({
+  dialect: 'sqlite',
+  storage: './mydatabase.sqlite',
+});
 
 const getDatabase = () => {
     return sequelize.authenticate()

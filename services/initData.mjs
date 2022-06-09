@@ -104,7 +104,7 @@ let users = [
   }
 ]
 
-//tripData.forEach((trip) => db.Trip.create(trip));
+tripData.forEach((trip) => db.Trip.create(trip));
 //reservationData.forEach((reservation) => db.Reservation.create(reservation));
-users.forEach((user) => db.User.create(user));
+// users.forEach((user) => db.User.create(user));
 console.log("Done!");
