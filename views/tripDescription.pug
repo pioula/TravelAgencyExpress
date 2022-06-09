@@ -10,6 +10,8 @@ block append head
 block content
   main
     article
+      if success 
+        h1 Reservation Complete!
       header
         +image()(src=`http://localhost:3000/${trip.img}`, alt=trip.title, class='cuba')
         h1 #{trip.title} #{trip.beg_date.toLocaleDateString("en-US")} - #{trip.end_date.toLocaleDateString("en-US")}

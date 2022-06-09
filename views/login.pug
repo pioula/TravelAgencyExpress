@@ -1,0 +1,19 @@
+extends layout/default
+
+//- includes
+include mixins/input
+
+block append head
+  link(rel='stylesheet', href='http://localhost:3000/stylesheets/form/styles.css')
+
+block content 
+  p Login
+  main
+    section
+      each error in errors
+        p #{error.param} - #{error.msg}
+    section
+      form(autocomplete='on', name='login_form', action=`/login`, method="post")
+        +input({ label: 'Mail:', name: 'email', type: 'text' })
+        +input({ label: 'Password: ', name: 'password', type: 'password'})
+        button(type='submit') Submit

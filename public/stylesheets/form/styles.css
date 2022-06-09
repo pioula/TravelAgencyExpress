@@ -1,0 +1,19 @@
+form > section {
+  width: 100%;
+  display: inline-flex;
+  justify-content: left;
+  padding: 10px;
+}
+
+section > label {
+  display: inline-block;
+  padding-right: 5px;
+}
+
+section > input {
+  display: inline-block;
+}
+
+form {
+  width: 50%;
+}

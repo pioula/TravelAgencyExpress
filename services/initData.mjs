@@ -1,4 +1,5 @@
-import getDatabase from "./database.mjs";
+import db from "./database.mjs";
+
 let tripData = [{
   title: 'Luxury Cribbean vacations',
   offer_description: 'A trip to Caribbean',
@@ -86,7 +87,7 @@ let tripData = [{
 
 let reservationData = [
   {
-    tripId: 1,
+    TripId: 1,
     name: 'Piotr',
     lastName: 'Ulanowski',
     email: 'a@b.cd',
@@ -94,9 +95,16 @@ let reservationData = [
   }
 ]
 
-let db = await getDatabase();
+let users = [
+  {
+    name: "John",
+    lastName: "Doe",
+    email: "email@mail.com",
+    password: "mySecret123",
+  }
+]
 
-tripData.forEach((trip) => db.Trip.create(trip));
+//tripData.forEach((trip) => db.Trip.create(trip));
 //reservationData.forEach((reservation) => db.Reservation.create(reservation));
-
+users.forEach((user) => db.User.create(user));
 console.log("Done!");
