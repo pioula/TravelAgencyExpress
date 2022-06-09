@@ -1,9 +1,7 @@
-import { Transaction } from "sequelize";
-import Sequelize from "sequelize";
 import bcrypt from 'bcrypt';
 import { validationResult } from "express-validator";
 
-import db, { sequelize } from "../services/database.mjs";
+import db from "../services/database.mjs";
 
 const registrationController = {
   // localhost:port/registration
@@ -26,8 +24,7 @@ const registrationController = {
           { errors: errors.array(), users: users.map((user) => user.dataValues) },
         );
       });
-    }
-    else {
+    } else {
       await bcrypt.hash(req.body.password, 4)
         .then((hash) => 
           db.User.create({
@@ -36,8 +33,8 @@ const registrationController = {
             email: req.body.email,
             password: hash,
           }));
-      
-      res.status(200).render('login_success');
+      req.session.userMail = req.body.email;
+      res.redirect('/user_main');
     }
   }
 }

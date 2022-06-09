@@ -5,21 +5,6 @@ const reservationModel = (sequelize, Sequelize, DataTypes) => {
         autoIncrement: true,
         primaryKey: true
       },
-      name: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
-      lastName: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },     
-      email: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          isEmail: true
-        }
-      },
       tickets: {
         type: DataTypes.INTEGER,
         allowNull: false

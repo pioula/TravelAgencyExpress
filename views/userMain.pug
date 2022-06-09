@@ -1,0 +1,10 @@
+extends layout/default
+
+block content 
+  div
+    p #{user}
+    each reservation in reservations
+      p trip: #{reservation.dataValues.TripId} tickets: #{reservation.dataValues.tickets}
+    form(autocomplete='on', name='log_out_form', action=`/user_main`, method="post")
+      button(type='submit') Log Out
+

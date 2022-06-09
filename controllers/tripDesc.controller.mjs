@@ -1,6 +1,4 @@
-import sequelize from "sequelize";
 import db from "../services/database.mjs";
-import getDatabase from "../services/database.mjs";
 
 const tripDescriptionController = {
   // localhost:port/trip/6

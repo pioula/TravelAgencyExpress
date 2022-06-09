@@ -23,6 +23,7 @@ html(lang="en")
             a(href='http://localhost:3000/registration') Register
         nav.header_nav
           ul
+            li: a(href="http://localhost:3000/user_main") #{session.userMail ? session.userMail : ''}
             li: a(href="http://localhost:3000/home") Home
             li: a(href="http://localhost:3000/login") Login 
             li: a(href="http://localhost:3000/registration") Register    

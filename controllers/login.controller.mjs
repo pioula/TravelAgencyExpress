@@ -1,17 +1,19 @@
-import { Transaction } from "sequelize";
-import Sequelize from "sequelize";
 import bcrypt from 'bcrypt';
 import { validationResult } from "express-validator";
 
-import db, { sequelize } from "../services/database.mjs";
+import db from "../services/database.mjs";
 
 const loginController = {
-  // localhost:port/registration
+  // localhost:port/login
   get: (req, res, next) =>  {
-    res.status(200).render(
-      'login',
-      { errors: [] },
-    );
+    if (req.session.userMail) {
+      res.redirect('/user_main');
+    } else {
+      res.status(200).render(
+        'login',
+        { errors: [] },
+      );
+    }
   },
   post: async (req, res, next) => {
     let errors = validationResult(req).array();
@@ -37,10 +39,10 @@ const loginController = {
         });
       }
     }
-    
-console.log(errors);
+
     if (isOk) {
-      res.status(200).render('login_success');
+      req.session.userMail = req.body.email;
+      res.redirect('/user_main');
     } else {
       res.status(400).render(
         'login',
